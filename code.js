@@ -6,8 +6,8 @@ function mergesort(array) {
     {
         for (var left = 0; left < length; left += 2*size)
         {
-            var mid = Math.min(left + (size - 1), length - 1); 
-            var right = Math.min(left + 2*(size - 1), length - 1); 
+            var mid = Math.min(left + size - 1, length - 1); 
+            var right = Math.min(left + 2 * size - 1, length - 1); 
             merge(array, left, mid, right);
         }
     }
@@ -35,6 +35,7 @@ function merge(arr, left, mid, right)
             arr[i] = tmp; 
             i++; 
             j++; 
+            mid++; 
         }
         else 
         {
