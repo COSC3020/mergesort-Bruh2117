@@ -16,4 +16,4 @@ Analyse the time complexity of your implementation and give a $\Theta$ bound for
 its worst-case runtime. Add your answer, including your reasoning, to this
 markdown file.
 
-The worst case scenario would be if the array was reversely sorted (ie. the greatest element in front with the following descending). In this case, the outer loop increases the subarray sizes by multiples of two, menaing it takes $log_{2}(n)$ time. The inner loop visits every element of the array, meaning that it will take $n$ time. Thus, the worst-case time complexity of this mergesort is $O(nlog(n))$. 
+The worst case scenario would be if the array was reversely sorted (ie. the greatest element in front with the following descending). In this case, the outer loop increases the subarray sizes by multiples of two, menaing it takes $log_{2}(n)$ time. The inner loop visits every element of the array, meaning that it will take $n$ time. Also within the inner loop we call the merge function that shifts every element in this array, taking another $n$ time. Thus, the worst-case time complexity of this mergesort is $O(n^2log(n))$. 
